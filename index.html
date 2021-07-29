@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포트폴리오 황우상</title>
+    
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/colorbox.css" />
+    <link rel="stylesheet" href="css/jquery.fullpage.css" />
+    <link rel="shortcut icon" href="images/logo_icon.jpg">
+    
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.fullpage.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
+    <script src="https://kit.fontawesome.com/a47b41ba49.js" crossorigin="anonymous"></script>
+    <style>
+        /* logo & menu */
+        #navTop {position: fixed; width: 100%; height: 70px; z-index:1; overflow: hidden; background: #fff; border-bottom: 1px solid #ccc;}
+        #navTop_box { width: 80%; height: 70px; margin:0 auto; transition: all 1s; position: relative;}
+        #navTop_box #logo {width: 240px; overflow: hidden; position: relative;}
+        #navTop_box #logo>div {width: 80px; float: left; line-height: 70px;}
+        #navTop_box #logo>span {display: inline-block; font-size: 14px; position: relative; top: 30px; left: 10px;}
+        #navTop_box #topMenu {position: absolute; right:0; top:0; overflow: hidden;}
+        #navTop_box #topMenu li {float:left; padding-left: 30px; line-height: 70px;}
+        #navTop_box #topMenu li a {font-size: 18px;}
+        #navTop_box #topMenu li.active > a {color: #02898c; border-bottom: 3px solid #56996b; font-weight: bold; padding-bottom: 4px;}
+        
+         /* logo & menu */
+        #navTop {position: fixed; width: 100%; height: 70px; z-index:1; overflow: hidden; background: #fff; border-bottom: 1px solid #ccc;}
+        #navTop_box { width: 80%; height: 70px; margin:0 auto; transition: all 1s; position: relative;}
+        #navTop_box #logo {width: 240px; overflow: hidden; position: relative;}
+        #navTop_box #logo>div {width: 80px; float: left; line-height: 70px;}
+        #navTop_box #logo>span {display: inline-block; font-size: 14px; position: relative; top: 30px; left: 10px;}
+        #navTop_box #topMenu {position: absolute; right:0; top:0; overflow: hidden;}
+        #navTop_box #topMenu li {float:left; padding-left: 30px; line-height: 70px;}
+        #navTop_box #topMenu li a {font-size: 18px;}
+        #navTop_box #topMenu li.active > a {color: #02898c; border-bottom: 3px solid #02898c; font-weight: bold; padding-bottom: 4px;}
+        
+        /* s0 */
+        .section_home {
+            background: #1faaaf; 
+            width: calc(100% - 140px); 
+            height: calc(100% - 140px); 
+            margin: 70px; 
+            position: relative;
+            background-image: url(images/background.jpg);
+            background-position: center center;
+        }
+        .section_home h1 {color: #fff; font-size: 130px; position: absolute; top: 45%; left: 50%; transform: translate(-45%, -50%);}
+        
+        /* s1 */
+        .s1 h2 {
+            position:absolute; top:0; 
+            background: #1faaaf; 
+            width: 100%; height: 100px;
+            color: #fff; _padding: 10px 0; margin-top: 70px; 
+            text-align: center; font-size: 36px; line-height: 100px;
+        }
+        .pr_container {
+            width: 90%; margin:0 auto;
+            overflow: hidden; padding-top: 100px;
+        }
+        .pr_container .pr_profile {
+            width: 28%; display: inline-block;
+            position:relative;
+            float: left; padding-left: 30px;
+        }
+        .pr_container .pr_profile div {
+            margin:0 auto;
+        }
+        .pr_container .pr_profile div img {
+            width: 200px;
+        }
+        .pr_container .pr_profile ul {
+            margin-top: 80px;
+            border-left: 3px solid #02898c;
+            padding-left: 10px;
+        }
+        .pr_container .pr_profile ul li {
+            padding-bottom: 15px;
+        }
+        .pr_container .pr_profile ul li:nth-child(1){
+            padding-bottom: 30px; 
+            font-size: 18px; font-weight: bold;
+        }
+        .pr_container .pr_profile ul li:nth-child(4) {
+            padding-bottom: 0;
+        }
+        .pr_container .pr_profile ul li i {
+            padding-right: 10px;
+        }
+        /* s1 education, lecence */
+        .pr_container .right_box {
+            width: 72%; display: inline-block; position: relative;
+        }
+        .right_box .pr_box {
+             margin-bottom: 45px;
+        }
+        .right_box .pr_box .pr_title {
+            float:left; display: inline-block; width: 20%;
+            position: relative; left:0; top:0; color: #46524a;
+            font-size: 20px; border-left: 3px solid #02898c;
+            padding-left: 10px;
+        }
+        .right_box .pr_box .pr_date {
+            float:left; display: inline-block; width: 25%;
+        }
+        .right_box .pr_box .pr_date div br {display: none;}
+        .right_box .pr_box .pr_date div{
+            margin-bottom: 15px;
+        }
+        .right_box .pr_box .pr_txt {
+            width: 55%; display: inline-block;
+        }
+        .right_box .pr_box .pr_txt div {
+            padding-bottom: 15px; font-weight: bold;
+        }
+        .right_box .pr_box .pr_txt div:nth-of-type(2) {
+            padding-bottom: 15px;
+        }
+        .right_box .pr_box .pr_txt ul {
+            padding-left: 20px;
+        }
+        .right_box .pr_box .pr_txt ul li {
+            padding-bottom: 10px;
+            word-spacing: 3px; font-size: 14px; 
+        }
+        
+        /* s1 content */
+        .right_box .ct_box {
+            width: 100%; height: 200px;
+            background: #ddd;
+            position: relative;
+        }
+        .right_box .ct_inbox {
+            width: calc(100% - 40px); height: calc(100% - 40px);
+            margin: auto;
+            border: 1px solid #02898c;
+            position: relative; top: 20px;
+        }
+        .right_box .ct_inbox .ct_title {
+            text-align: center;
+            position: relative; top: -10px;
+        }
+        .right_box .ct_inbox .ct_title h3 {
+            text-align: center;
+            width: 140px; display: inline-block;
+            background: #ddd; font-size: 20px; color: #46524a;
+        }
+        .right_box .ct_inbox .ct_txt { display: flex;}
+        .right_box .ct_inbox .ct_txt ul {
+            flex: 1;
+        }
+        .right_box .ct_inbox .ct_txt ul li {
+            text-align: center; font-size: 18px; _display: none;
+        }
+        .right_box .ct_inbox .ct_txt ul li:nth-child(1) {
+            text-align: center; padding: 15px 0 12px 0;
+        }
+        .right_box .ct_inbox .ct_txt ul li:nth-child(1) img{
+            width: 15%; vertical-align: bottom;
+        }
+        /*s2 big */
+        .s2 {
+            width: 90%; margin:0 auto;
+        }
+        .slide {
+            width: 100%; height: 80%; overflow: hidden;
+        }
+        .slide .pf_img_container {
+            width: 50%; display: inline-block;
+            position: relative; float: left;
+            _margin-left: 5%; margin-top: -30px;
+        }
+        .slide .pf_img_container .pf_image_1 {
+            width: 100%;
+            position: relative; left: 20px; top:0;
+            margin-top: 20px; display: none;
+        }
+        .slide .pf_img_container .pf_image_2 {
+            width: 100%;
+            position: relative; left: 20px; top:0;
+            margin-top: 20px; display: none;
+        }
+        .slide .pf_img_container .pf_image_3 {
+            width: 100%;
+            position: relative; left: 20px; top:0;
+            margin-top: 20px; display: none;
+        }
+        .slide .pf_img_container .pf_image_1 img {
+            width: 100%;
+        }
+        .slide .pf_img_container .pf_image_2 img {
+            width: 100%;
+        }
+        .slide .pf_img_container .pf_image_3 img {
+            width: 100%;
+        }
+        
+        /* s2 still */
+        .pf_st_cut>ul>li {
+            cursor: pointer;
+        }
+        .slide .pf_img_container .pf_st_cut {
+            width:100%; position: relative; left: 20px;
+        }
+        .slide .pf_img_container .pf_st_cut>ul {
+            width: 100%;
+        }
+        .slide .pf_img_container .pf_st_cut>ul>li {
+            width: 32%;
+            margin:0;
+            margin-left: 2%;
+            margin-top: 2%;
+            float: left;
+        }
+        .slide .pf_img_container .pf_st_cut>ul>li:first-child{
+            margin-left:0;
+        }
+        .slide .pf_img_container .pf_st_cut>ul>li>img {
+            width: 100%;
+        }
+        .slide .pf_txt_container {
+            width: 50%; display: inline-block;
+            padding-left: 7%; margin-top: -30px;
+        }
+        .slide .pf_txt_container .pf_title {
+            display: block; font-size: 26px; margin: 25px 0;
+            padding: 10px 0; text-align: center; background: #aaa;
+            color: #fff; font-weight: normal; border-radius: 10px;
+        }
+        .slide .pf_txt_container .pf_name {
+            display: inline-block;
+            width: 25%; float: left; padding: 10px 0; font-size: 16px;
+        }
+        .slide .pf_txt_container .pf_txt {
+            display: inline-block;
+            width: 75%; padding: 10px 0;
+            font-weight: bold; font-size: 16px; line-height: 1.3;
+        }
+        /* go버튼 */
+        .pf_gosite {
+            position: relative; text-align: center;
+            margin-top: 30px; margin-bottom: 100px;
+        }
+        .pf_gosite a {
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            width: 100%; padding: 10px 0;
+            font-size: 18px;
+            border:1px solid #aaa;
+            transition: 0.5s;
+        }
+        .pf_gosite a:hover {
+            color: #fff; border:1px solid #1faaaf;
+        }
+        .pf_gosite a:before {
+            content:"";
+            z-index: -1;
+            position: absolute; background: #1faaaf;
+            transition: 1s; 
+            left: 50%; top:0; transform:translateX(-50%);
+            width: 0; height: 100%;
+        }
+        .pf_gosite a:hover:before {width: 100%;}
+        .fp-controlArrow.fp-prev {
+            left: -30px;
+            width: 0;
+            border-width: 38.5px 34px 38.5px 0;
+            border-color: transparent #999 transparent transparent;
+        }
+        .fp-controlArrow.fp-next {
+            right: -50px;
+            border-width: 38.5px 0 38.5px 34px;
+            border-color: transparent transparent transparent #999;
+        }
+        @media screen and (min-width: 1280px) and (max-width: 1599px){
+            
+        }
+        @media screen and (min-width: 768px) and (max-width: 1279px){
+            #navTop {
+                width: 100%; height: 60px;
+            }
+            #navTop_box {
+                width: 90%; height: 60px;
+            }
+            #navTop_box #logo {
+                width: 200px;
+            }
+            #navTop_box #logo>div {
+                width: 60px; line-height: 60px;
+            }
+            #navTop_box #logo>div>img {
+                width: 90%;
+            }
+            #navTop_box #logo>span {
+                font-size: 12px; top: 32px; left: 5px;
+            }
+            #navTop_box #topMenu li a {
+                font-size: 16px;
+            }
+            #navTop_box #topMenu li.active > a {
+                border-bottom: 2px solid #02898c; padding-bottom: 3px;
+            }
+            
+            .section {
+                width: 90%;
+            }
+            .section h2 {
+                position: relative; 
+                text-align: center; font-size: 35px;
+                line-height: 2.5;
+                letter-spacing: 4px;
+            }
+            
+            .s1 h2 {
+                background:#1faaaf; color: #fff;
+                padding: 10px 0; margin-top: -94px;
+            }
+            
+            /* s0 */
+            .section_home {
+                width: calc(100% - 80px); height: calc(100% - 80px);
+                margin: 40px;
+            }
+            .section_home h1 {
+                font-size: 70px;
+            }
+            
+            /* s1 profile */
+            .pr_container {
+                padding-top: 25px;
+                overflow: visible;
+            }
+            .pr_container .pr_profile {
+                width: 100%;
+                display: inline-block;
+                position: relative; float: none;
+                padding-left: 5%; margin-bottom: 20px;
+            }
+            .pr_container .pr_profile div {
+                margin: 0 auto;
+                width: 26%; float: left;
+                display: inline-block;
+            }
+            .pr_container .pr_profile div img {
+                width: 140px;
+            }
+            .pr_container .pr_profile ul {
+                width: 74%; margin-top: 0; display: inline-block;
+                position: absolute; bottom: 5px; border-left:0;
+            }
+            .pr_container .pr_profile ul li {
+                padding-bottom: 12px;
+                font-size: 14px;
+            }
+            .pr_container .pr_profile ul li:nth-child(1) {
+                padding-bottom: 25px;
+                font-size: 18px; font-weight: bold;
+            }
+            .pr_container .pr_profile ul li:nth-child(4) {
+                padding-bottom: 0;
+            }
+            .pr_container .pr_profile ul li i {
+                padding-right: 10px;
+            }
+            /*s1 education, license */
+            .pr_container .right_box {
+                width: 100%; padding: 0 10px;
+            }
+            .right_box .pr_box {
+                margin-bottom: 16px;
+            }
+            .right_box .pr_box .pr_title {
+                font-size: 18px;
+            }
+            .right_box .pr_box .pr_date div {
+                padding-bottom: 10px;
+                font-size: 15px;
+            }
+            .right_box .pr_box .pr_date div br {
+                display: block;
+            }
+            .right_box .pr_box .pr_txt div {
+                padding-bottom: 10px;
+                font-size: 15px;
+            }
+            .right_box .pr_box .pr_txt div:nth-of-type(2){
+                padding-bottom: 15px;
+            }
+            .right_box .pr_box .pr_txt ul {
+                padding-left: 15px;
+            }
+            .right_box .pr_box .pr_txt ul li{
+                padding-bottom: 7px;
+                word-spacing: 3px; font-size: 12px; line-height: 1.3;
+            }
+            /* s1 contact */
+            .right_box .ct_box {
+                width: 100%; height: 130px; top: 35px;
+            }
+            .right_box .ct_inbox {
+                width: calc(100% - 30px); height: calc(100% - 30px);
+                top: 15px;
+            }
+            .right_box .ct_inbox .ct_title h3 {
+                font-size: 18px;
+            }
+            .right_box .ct_inbox .ct_txt ul li {
+                font-size: 16px;
+            }
+            .right_box .ct_inbox .ct_txt ul li:nth-child(1){
+                padding:0 0 8px 0;
+                margin-top: -4px;
+            }
+            .right_box .ct_inbox .ct_txt ul li:nth-child(1) img {
+                width: 40px;
+            }
+            
+            /* s2 */
+            .slide h2 {
+                padding-bottom: 50px;
+            }
+            .s2 {
+                width: 80%;
+                margin-top: 15px;
+            }
+/* 이부분 입니다. */
+            .slide .pf_img_container {
+                width: 100%;
+                display: block;
+                position: relative;
+                margin-left: 0;
+                margin-top: 0;
+            }
+            .slide .pf_img_container .pf_image_1 {
+                width: 80%;
+                margin:0 auto;
+                position: relative;
+                _left: 20px;
+                top: 0;
+                margin-top: 20px;
+                display: none;
+            }
+            .slide .pf_img_container .pf_image_2 {
+                width: 80%;
+                margin:0 auto;
+                position: relative;
+                _left: 20px;
+                top: 0;
+                margin-top: 20px;
+                display: none;
+            }
+            .slide .pf_img_container .pf_image_3 {
+                width: 80%;
+                margin:0 auto;
+                position: relative;
+                _left: 20px;
+                top: 0;
+                margin-top: 20px;
+                display: none;
+            }
+            .slide .pf_img_container .pf_image_1 img {
+                width: 100%;
+            }
+            .slide .pf_img_container .pf_image_2 img {
+                width: 100%;
+            }
+            .slide .pf_img_container .pf_image_3 img {
+                width: 100%;
+            }
+            .slide .pf_img_container .pf_st_cut {
+                width: 80%;
+                margin:auto;
+                position: relative;
+                _left: 13px;
+            }
+            
+            .slide .pf_img_container .pf_st_cut>ul>li {
+                width: 32%;
+                margin:0;
+                margin-left: 2%;
+                margin-top: 2%;
+                float: left;
+            }
+            .slide .pf_img_container .pf_st_cut>ul>li:first-child{
+                margin-left:0;
+            }
+            .slide .pf_txt_container {
+                width: 100%;
+                margin:0 auto;
+                margin-top: 32px; 
+                padding-left:0;
+            }
+            .slide .pf_txt_container .pf_title {
+                width: 80%;
+                margin:0 auto;
+                font-size: 20px;
+                position: relative;
+                left: 3%;
+            }
+            .slide .pf_txt_container div{
+                width: 80%;
+                padding-left: 4%;
+                margin:0 auto;
+            }
+            .slide .pf_txt_container div:last-child {
+                display: block; margin-top: 30px;
+            }
+            .slide .pf_txt_container .pf_name {
+                width: 25%; float: left; 
+                padding: 10px 0; font-size: 18px; line-height: 1;
+            }
+            .slide .pf_txt_container .pf_txt {
+                width: 75%; padding: 10px 0;
+                font-weight: bold; font-size: 18px; line-height: 1;
+            }
+            .slide .pf_txt_container p span {
+                display: none;
+            }
+            .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {
+                display: none;
+            }
+        }
+        @media screen and (max-width: 767px){
+            #navTop {
+                width: 100%; height: 50px;
+            }
+            #navTop_box {
+                width: 90%; height: 50%;
+            }
+            #navTop_box #logo>div {
+                width: 50px; line-height: 50px;
+            }
+            #navTop_box #logo>div>img {
+                width: 90%;
+            }
+            #navTop_box #logo>span {display: none;}
+            #navTop_box #topMenu li {
+                padding-left: 10px; line-height: 50px;
+            }
+            #navTop_box #topMenu li a {
+                font-size: 14px;
+            }
+            #navTop_box #topMenu li.active>a {
+                border-bottom: 0; padding: 4px;
+                background:#1faaaf;
+                color: #fff; border-radius: 5px;
+            }
+            .s0 {
+                width: 90%;
+            }
+            .s0 h1 {
+                position: relative;
+                text-align: center;
+                font-size: 30px; letter-spacing: 4px;
+                color: #fff; 
+                padding: 7px 0;
+                margin-top: 50px;
+            }
+            /* s1 profile */
+            .s1 h2 {
+              margin-top: 32px;   
+            }
+            .pr_container {
+                padding-top: 20px;
+                overflow: visible;
+            }
+            .pr_container .pr_profile {
+                width: 100%;
+                display: inline-block;
+                position: relative;
+                float: none;
+                padding-left: 0; margin-bottom: 14px;
+            }
+            .pr_container .pr_profile div {
+                margin:0 auto;
+                width: 30%; float: left; display: inline-block;
+            }
+            .pr_container .pr_profile div img {
+                width: 100%;
+            }
+            .pr_container .pr_profile ul {
+                width: 70%;
+                margin-top: 0;
+                display: inline-block;
+                position: absolute; bottom: 5px;
+                border-left: 0;
+                padding-left: 10px;
+            }
+            .pr_container .pr_profile ul li {
+                padding-bottom: 7px; font-size: 13px;
+            }
+            .pr_container .pr_profile ul li:nth-child(1){
+                padding-bottom: 15px; font-size: 14px; font-weight: bold;
+            }
+            .pr_container .pr_profile ul li:nth-child(4){
+                padding-bottom: 0;
+            }
+            .pr_container .pr_profile ul li i {
+                padding-right: 10px;
+            }
+            /* s1 education, license */
+            .pr_container .right_box{
+                width: 100%; padding:0;
+            }
+            .right_box .pr_box {
+                margin-bottom: 0;
+            }
+            .right_box .edu_box {
+                margin-bottom: 10px;
+            }
+            .right_box .pr_box .pr_title {
+                float: none;
+                display: block;
+                width: 100%;
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            .right_box .pr_box .pr_date {
+                display: none;
+            }
+            .right_box .pr_box .pr_txt {
+                width: 100%; display: block;
+            }
+            .right_box .pr_box .pr_txt div {
+                padding-bottom: 6px; padding-left: 8px;
+                font-size: 12px; font-weight: normal;
+            }
+            .right_box .pr_box .pr_txt div:nth-of-type(2) {
+                padding-bottom: 10px;
+            }
+            .right_box .pr_box .pr_txt ul {
+                display: none;
+            }
+            .right_box .cer_box {
+                margin-top: 20px;
+            }
+            
+            /* s1 contact */
+            .right_box .ct_box {
+                width: 100%; height: 140px; top: 20px;
+            }
+            .right_box .ct_inbox {
+                width: calc(100% - 14px); height: calc(100% - 14px);
+                top: 7px;
+            }
+            .right_box .ct_inbox .ct_title {
+                top: -7px; height: 20px;
+            }
+            .right_box .ct_inbox .ct_title h3 {
+                font-size: 18px; width: 100px;
+            }
+            .right_box .ct_inbox .ct_txt {
+                display: block;
+                margin-top: 10px;
+            }
+            .right_box .ct_inbox .ct_txt ul {
+                flex: none;
+                overflow:hidden;
+                margin-left: 27%;
+            }
+            .right_box .ct_inbox .ct_txt ul li {
+                font-size: 13px; float: left;
+            }
+            .right_box .ct_inbox .ct_txt ul li:nth-child(1) {
+                padding:0;
+            }
+            .right_box .ct_inbox .ct_txt ul li:nth-of-type(n) {
+                width: 10%; height: 24px;
+                line-height: 24px; text-align: left; font-weight: bold;
+            }
+            .right_box .ct_inbox .ct_txt ul li:nth-of-type(2n) {
+                width: 70%; height: 24px;
+                line-height: 20px; text-align: left; font-weight: bold;
+            }
+            .right_box .ct_inbox .ct_txt ul li:nth-child(1) img {width: 18px;}
+            
+            /* s2 */
+            .slide h2 {
+                padding-bottom: 40px;
+            }
+            .section_content3 {
+                width: 100%;
+            }
+            .slide .pf_img_container {
+                width: 100%;
+            }
+            .slide .pf_img_container .pf_image_1 {
+                width: 100%;
+                position: relative;
+                top: 0;
+                left:0;
+                margin-top: 20px;
+            }
+            .slide .pf_img_container .pf_image_2 {
+                width: 100%;
+                position: relative;
+                top: 0;
+                left:0;
+                margin-top: 20px;
+            }
+            .slide .pf_img_container .pf_image_3 {
+                width: 100%;
+                position: relative;
+                top: 0;
+                left:0;
+                margin-top: 20px;
+            }
+            .slide .pf_img_container .pf_image_1 > img {
+                width: 100%;
+            }
+            .slide .pf_img_container .pf_image_2 > img {
+                width: 100%;
+            }
+            .slide .pf_img_container .pf_image_3 > img {
+                width: 100%;
+            }
+            .slide .pf_txt_container {
+                width: 100%; 
+                margin-top: -8px;
+                padding-left: 0%;
+            }
+ 
+            .slide .pf_txt_container .pf_title {
+                font-size: 16px;
+            }
+            .slide .pf_txt_container .pf_name {
+                width: 34%; float: left;
+                padding: 5px 0px;
+                font-size: 12px; line-height: 1.3;
+            }
+            .slide .pf_txt_container .pf_txt {
+                width: 64%; padding: 6px 0px;
+                font-weight: bold; font-size: 12px; line-height:1.3;
+            }
+            .pf_gosite {
+                margin-top: 10px; margin-bottom: 0;
+            }
+            .pf_gosite a {
+                overflow: hidden; position: relative; display: inline-block;
+                vertical-align: top; width: 100%; padding: 7px 0;
+                font-size: 16px; border:1px solid #aaa;
+                transition: all 0.5s;
+            }
+            
+            /*s2 still */
+
+            .slide .pf_img_container .pf_st_cut {
+                width: 100%;
+                position: relative;
+                left: 0px;
+            }
+/*            .slide .pf_img_container .pf_st_cut>ul>li {
+                width: 30%;
+                margin: 1%;
+                float: left;
+            }
+*/
+            .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {
+                display: none;
+            }
+        }
+        }
+    </style>
+    
+    <script>
+        $(function(){
+           $(".pf_st_cut>ul>li").click(function(){
+               var i = $(this).index();
+               
+               $(".slide .pf_img_container .pf_image_1").fadeOut(0.1);
+               $(".slide .pf_img_container .pf_image_1").eq(i).fadeIn(0.1);
+               $(".slide .pf_img_container .pf_image_2").fadeOut(0.1);
+               $(".slide .pf_img_container .pf_image_2").eq(i).fadeIn(0.1);
+               $(".slide .pf_img_container .pf_image_3").fadeOut(0.1);
+               $(".slide .pf_img_container .pf_image_3").eq(i).fadeIn(0.1);
+           });
+            $(".profile_btn").colorbox({iframe:true,innerWidth:'80%',innerHeight:760});
+        
+        });
+    </script>
+</head>
+<body>
+    <nav id="navTop">
+        <div id="navTop_box">
+            <div id="logo" class="clear">
+                <div><img src="images/logo_black.jpg" alt="logo"></div>
+                <span>황우상 / Hwang Usang</span>
+            </div>
+            <ul id="topMenu" class="clear">
+                <li data-menuanchor="0st" class="active"><a href="#0st">Home</a></li>
+                <li data-menuanchor="1st"><a href="#1st">Profile</a></li>
+                <li data-menuanchor="2st"><a href="#2st">PortFolio</a></li>
+            </ul>
+        </div>
+    </nav>    
+    <div id="full-page">
+        <div class="section s0" data-anchor="1st">
+           <div class="section_home">
+               <h1>PORTFOLIO</h1>
+           </div>                
+        </div>
+        <div class="section s1" data-anchor="2st">
+           <h2>PROFILE</h2>
+           <div class="pr_container">
+              <div class="pr_profile">
+                  <div><img src="images/ID_Photo.jpg" alt="사진"></div>
+                  <ul>
+                      <li>황우상 / Hwang Usang</li>
+                      <li><i class="fas fa-user"></i>모션 그래픽 디자이너</li>
+                      <li><i class="fas fa-calendar"></i>1995.02.11 (만26세)</li>
+                      <li><i class="fas fa-map-marker-alt"></i>인천광역시 계양구 거주</li>
+                  </ul>
+              </div>
+              <div class="right_box">
+                 <div class="pr_box edu_title clear">
+                  <h3 class="pr_title edu_title">EDUCATION</h3>
+                  <div class="pr_date edu_date">
+                      <div>2021.03.10 - 2021.08.10</div>
+                  </div>
+                  <div class="pr_txt edu_txt">
+                      <div>영상편집 , 모션그래픽</div>
+                      <ul>
+                          <li>- 교육기관: 방송정보국제교육원 (서울 영등포구)</li>
+                          <li>- 교육기간: 2021.03.10 - 2021.08.10</li>
+                          <li>- 교육내용: 포토샵 , 영상편집 , 모션그래픽</li>
+                      </ul>
+                  </div>
+                  </div>
+                  <div class="pr_box cer_box clear">
+                      <h3 class="pr_title cer_title">LICENSE</h3>
+                      <div class="pr_date cer_date">
+                          <div>2019.09.20</div>
+                          <div>2012.07.20</div>
+                      </div>
+                      <div class="pr_txt cer_txt">
+                          <div>웹 디자이너 기능사</div>
+                          <div>컴퓨터 그래픽스 운용 기능사</div>
+                      </div>
+                  </div>
+                  <div class="ct_box">
+                     <div class="ct_inbox">
+                         <div class="ct_title"><h3>CONTACT</h3></div>
+                         <div class="ct_txt">
+                            <ul>
+                                 <li><img src="images/con_phone.png" alt="phone"></li>
+                                 <li>010-5092-4740</li>
+                            </ul>
+                            <ul>         
+                                 <li><img src="images/con_email.png" alt="email"></li>
+                                 <li>skkpdntkd@naver.com</li>
+                            </ul>
+                            <ul>
+                                <li><img src="images/con_kakao.png" alt="kakao"></li>
+                                <li>ID: creategolem</li>
+                            </ul>
+                         </div>
+                     </div>
+                  </div>
+              </div>
+           </div>
+        </div>
+        <div class="section s2" data-anchor="3st">
+            <div class="section_content3">
+                <div class="slide slide_1 clear">
+                    <div class="pf_img_container">
+                        <div class="image">
+                            <div class="pf_image_1" style="display: block;">
+                                <img src="images/0.jpg" alt="">
+                            </div>
+                            <div class="pf_image_1">
+                                <img src="images/1.jpg" alt="">
+                            </div>
+                            <div class="pf_image_1">
+                                <img src="images/2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="pf_st_cut">
+                            <ul class="clear">
+                                <li><img src="images/thumb0.jpg" alt=""></li>
+                                <li><img src="images/thumb1.jpg" alt=""></li>
+                                <li><img src="images/thumb2.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pf_txt_container">
+                        <h3 class="pf_title">완다와 거상</h3>
+                        <div class="clear">
+                            <span class="pf_name">프로젝트 명:</span>
+                            <span class="pf_txt">완다와 거상 리메이크 프로모션 영상</span>
+                        </div>
+                        <div class="clear">
+                            <span class="pf_name">제작소요기간:</span>
+                            <span class="pf_txt">3주</span>
+                        </div>
+                        <div class="clear">
+                            <span class="pf_name">설명:</span>
+                            <span class="pf_txt">2018년에 새롭게 리메이크된 명작 게임 '완다와 거상'의 프로모션 영상을 제작하였습니다.
+                            몽환적인 분위기를 살리기 위해 종이에 펜으로 그리는듯한 연출을 사용했고 BGM의 전환으로 극적인 분위기를 보여주고자 하였습니다.</span>
+                        </div>
+                        <div class="clear">
+                            <span class="pf_name">작업툴</span>
+                            <span class="pf_txt">Adobe After Effects</span>
+                        </div>
+                        <div class="pf_gosite">
+                            <a href="https://www.youtube.com/embed/QN_dr-NlaKs" class="profile_btn">Click to PLAY</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide slide_2 clear">
+                    <div class="pf_img_container">
+                        <div class="image">
+                            <div class="pf_image_2" style="display: block;">
+                                <img src="images/3.jpg" alt="">
+                            </div>
+                            <div class="pf_image_2">
+                                <img src="images/4.jpg" alt="">
+                            </div>
+                            <div class="pf_image_2">
+                                <img src="images/5.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="pf_st_cut">
+                            <ul class="clear">
+                                <li><img src="images/thumb3.jpg" alt=""></li>
+                                <li><img src="images/thumb4.jpg" alt=""></li>
+                                <li><img src="images/thumb5.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pf_txt_container">
+                        <h3 class="pf_title">미스터 기간제</h3>
+                        <div class="clear">
+                            <span class="pf_name">프로젝트 명:</span>
+                            <span class="pf_txt">미스터 기간제 드라마 타이틀시퀀스</span>
+                        </div>
+                        <div class="clear">
+                            <span class="pf_name">제작소요기간:</span>
+                            <span class="pf_txt">3주</span>
+                        </div>
+                        <div class="clear">
+                            <span class="pf_name">설명:</span>
+                            <span class="pf_txt">명문고에서 벌어지는 스릴러물인 '미스터기간제'의 타이틀시퀀스를 제작하였다. 스릴러의 무거운 분위기를 살리고 등장인물간의 대립구도를 이용해 인물들을 배치함으로써 스릴러 장르 드라마의 분위기를 보여주고자 하였습니다.</span>
+                        </div>
+                        <div class="clear">
+                            <span class="pf_name">작업툴</span>
+                            <span class="pf_txt">Adobe After Effects</span>
+                        </div>
+                        <div class="pf_gosite">
+                            <a href="https://www.youtube.com/embed/F9CRkNiw8FM" class="profile_btn">Click to PLAY</a>
+                        </div>
+                </div>
+                <div class="slide slide_3 clear">
+                    <div class="pf_img_container">
+                        <div class="image">
+                            <div class="pf_image_3" style="display: block;">
+                                <img src="images/6.jpg" alt="">
+                            </div>
+                            <div class="pf_image_3">
+                                <img src="images/7.jpg" alt="">
+                            </div>
+                            <div class="pf_image_3">
+                                <img src="images/8.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="pf_st_cut">
+                            <ul class="clear">
+                                <li><img src="images/thumb6.jpg" alt=""></li>
+                                <li><img src="images/thumb7.jpg" alt=""></li>
+                                <li><img src="images/thumb8.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pf_txt_container">
+                        <h3 class="pf_title">전체이용가 연령고지</h3>
+                        <div class="clear">
+                            <span class="pf_name">프로젝트 명:</span>
+                            <span class="pf_txt">연령고지 영상 제작</span>
+                        </div>
+                        <div class="clear">
+                            <span class="pf_name">제작소요기간:</span>
+                            <span class="pf_txt">2주</span>
+                        </div>
+                        <div class="clear">
+                            <span class="pf_name">설명:</span>
+                            <span class="pf_txt">전체 이용가 연령에 맞게 누구나 주목할 수 있을 만한 다양한 사물들을 연달아 이어지게 배치함으로써 생동감을 연출하고자 했습니다. 영상의 마지막에는 ALL이라는 글자를 침대 위에 떨어지게 함으로써 이목을 집중시켰습니다.</span>
+                        </div>
+                        <div class="clear">
+                            <span class="pf_name">작업툴</span>
+                            <span class="pf_txt">Cinema 4D, Adobe After Effects</span>
+                        </div>
+                        <div class="pf_gosite">
+                            <a href="https://www.youtube.com/embed/YrQtdERa380" class="profile_btn">Click to PLAY</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <script>
+        $(document).ready(function() {
+            $('#full-page').fullpage({
+                sectionsColor: ['#fff', '#eee', '#fff'],
+                anchors: ['0st', '1st', '2st'],
+                menu: '#topMenu',
+                navigation: true,
+				navigationPosition: 'right',
+            }); 
+        });
+    </script>
+</body>
+</html>
